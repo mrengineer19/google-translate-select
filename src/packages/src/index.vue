@@ -8,7 +8,13 @@
       >
         <div class="language">
           <div class="flag">
+            <img
+              v-if="__selectedLangInfo.icon"
+              class="language__flag"
+              :src="__selectedLangInfo.icon"
+            />
             <div
+              v-else
               :class="
                 'language__flag language__flag--' + __selectedLangInfo.code
               "
@@ -45,7 +51,13 @@
             >
               <div class="language">
                 <div class="flag">
+                  <img
+                    v-if="language.icon"
+                    class="language__flag"
+                    :src="language.icon"
+                  />
                   <div
+                    v-else
                     :class="'language__flag language__flag--' + language.code"
                   ></div>
                 </div>
